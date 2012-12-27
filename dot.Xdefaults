@@ -1,0 +1,156 @@
+Xcursor.theme: redglass
+Xcursor.size:  64
+
+xpdf.initialZoom: width
+
+!Xft.dpi: 96
+
+Emacs.default.attributeBackground:	gray80
+Emacs.default.attributeForeground:	black
+!Emacs.default.attributeFont: -cronyx-courier-medium-r-*-*-14-*-*-*-*-*-koi8-r
+Emacs.default.attributeFont: -*-terminus-medium-r-*-*-32-*-*-*-*-*-koi8-r
+Emacs.bold.attributeFont: -*-terminus-bold-r-*-*-32-*-*-*-*-*-koi8-r
+Emacs.bold-italic.attributeFont: -*-terminus-bold-o-*-*-32-*-*-*-*-*-koi8-r
+Emacs.italic.attributeFont: -*-terminus-medium-o-*-*-32-*-*-*-*-*-koi8-r
+Emacs*menubar*font: fixed
+Emacs.modeline.attributeFont: fixed
+Emacs.modeline.attributeBackground: tan
+!Emacs.bold-italic.attributeFont: -cronyx-*-bold-i-*-*-14-*-*-*-*-*-*-*
+!Emacs.italic.attributeFont: -cronyx-*-medium-o-*-*-14-*-*-*-*-*-koi8-*
+!Emacs.bold.attributeFont: -misc-bold-medium-r-semicondensed--13-120-75-75-c-60-koi8-r
+Emacs*popup*Font: -misc-*-*-*-*-*-14-*-*-*-*-*-koi8-r
+
+!! NETSCAPE
+Netscape*fontList: -*-helvetica-medium-r-*-*-8-*-*-*-*-*-*-*
+
+Netscape*XmTextField.fontList:  -cronyx-helvetica-medium-r-*-*-*-80-*-*-*-*-koi8-r
+Netscape*XmText.fontList:       -*-helvetica-medium-r-*-*-*-80-*-*-*-*-koi8-r
+Netscape*XmList*fontList:       -*-helvetica-medium-r-*-*-*-80-*-*-*-*-koi8-r
+Netscape*menuBar*fontList:      -*-helvetica-medium-r-*-*-*-80-*-*-*-*-koi8-r
+Netscape*topArea*XmTextField.fontList: -*-times-medium-r-*-*-*-80-*-*-*-*-koi8-r
+Netscape*XmLGrid*fontList: -*-helvetica-medium-r-*-*-*-*-*-*-*-*-*-*, -*-helvetica-bold-r-*-*-*-80-*-*-*-*-*-*=BOLD, -*-helvetica-medium-o-*-*-*-80-*-*-*-*-*-*=ITALIC 
+
+Netscape*drawingArea.translations:  #replace    \n\
+        <Btn1Down>:           ArmLink()   \n\
+        <Btn2Down>:           ArmLink()   \n\
+        ~Shift<Btn1Up>:       ActivateLink()  \n\
+        ~Shift<Btn2Up>:       ActivateLink(new-window)  \
+                                        DisarmLink()    \n\
+        Shift<Btn1Up>:        ActivateLink(save-only)  \
+                                        DisarmLink()    \n\
+        Shift<Btn2Up>:        ActivateLink(save-only)  \
+                                        DisarmLink()    \n\
+        <Btn1Motion>:             DisarmLinkIfMoved()  \n\
+        <Btn2Motion>:             DisarmLinkIfMoved()  \n\
+        <Btn3Motion>:             DisarmLinkIfMoved()  \n\
+        <Motion>:             DescribeLink()  \n\
+        <Btn3Down>:           xfeDoPopup()    \n\
+        <Btn3Up>:             ActivatePopup() \n\
+        Ctrl<Btn4Down>: PageUp()\n\
+        Ctrl<Btn5Down>: PageDown()\n\
+        Shift<Btn4Down>: LineUp()\n\
+        Shift<Btn5Down>: LineDown()\n\
+         None<Btn4Down>: LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()\n\
+         None<Btn5Down>: LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()\n\
+        Alt<Btn4Down>: xfeDoCommand(forward)\n\
+        Alt<Btn5Down>: xfeDoCommand(back)\n\
+	<Key>space: PageDown()\n\
+	Shift<Key>space: PageUp()\n\
+	Ctrl<Key>p: LineUp()\n\
+	Ctrl<Key>n: LineDown()\n
+
+Netscape*globalNonTextTranslations: #override\n\
+ Shift<Btn4Down>: LineUp()\n\
+ Shift<Btn5Down>: LineDown()\n\
+ None<Btn4Down>:LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()LineUp()\n\
+ None<Btn5Down>:LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()LineDown()\n\
+ Alt<Btn4Down>: xfeDoCommand(forward)\n\
+ Alt<Btn5Down>: xfeDoCommand(back)\n
+ <Key>KP_9: PageUp()\n\
+ <Key>KP_3: PageDown()\n\
+ <Key>KP_8: LineUp()\n\
+ <Key>KP_2: LineDown()\n\
+ <Key>KP_4: ColumnLeft()\n\
+ <Key>KP_6: ColumnRight()\n\
+ <Key>space: PageDown()\n\
+ Shift<Key>space: PageUp()\n
+
+!Netscape*browserGlobalTranslations:		#override\n\
+! ~Meta ~Ctrl ~Shift<Key>space: PageDown()\n\
+! ~Alt ~Ctrl ~Shift<Key>space: PageDown()\n\
+! ~Meta ~Ctrl Shift<Key>space: PageUp()\n\
+! ~Alt ~Ctrl Shift<Key>space: PageUp()\n
+
+*documentFonts.charset*iso8859-1: koi8-r
+
+
+!## Athena text widgets
+*Paned.Text.translations: #override\n\
+ Shift<Btn4Down>,<Btn4Up>: scroll-one-line-down()\n\
+ Shift<Btn5Down>,<Btn5Up>: scroll-one-line-up()\n\
+ Ctrl<Btn4Down>,<Btn4Up>: previous-page()\n\
+ Ctrl<Btn5Down>,<Btn5Up>: next-page()\n\
+ None<Btn4Down>,<Btn4Up>:scroll-one-line-down()scroll-one-line-down()scroll-one-line-down()scroll-one-line-down()scroll-one-line-down()\n\
+ None<Btn5Down>,<Btn5Up>:scroll-one-line-up()scroll-one-line-up()scroll-one-line-up()scroll-one-line-up()scroll-one-line-up()\n\
+
+A very useful hack for xrn, xmh: adds scrolling to the specific "Table Of Contents" (TOC) widget 
+
+!## Athena table of contents, for toc widgets of xrn & xmh
+*toc.Translations: #override\n\
+ Shift<Btn4Down>,<Btn4Up>: scroll-one-line-down()\n\
+ Shift<Btn5Down>,<Btn5Up>: scroll-one-line-up()\n\
+ Ctrl<Btn4Down>,<Btn4Up>: previous-page()\n\
+ Ctrl<Btn5Down>,<Btn5Up>: next-page()\n\
+ None<Btn4Down>,<Btn4Up>:scroll-one-line-down()scroll-one-line-down()scroll-one-line-down()scroll-one-line-down()scroll-one-line-down()\n\
+
+!! XTerm
+!! select rus words by double click
+!! XTerm*CharClass: 33:48,37:48,45-47:48,58:48,64:48,126:48,160-255:48
+!XTerm*font:	-*-terminus-medium-r-*-*-32-*-*-*-*-*-koi8-r
+XTerm*font:	-*-terminus-medium-r-*-*-32-*-*-*-*-*-iso10646-*
+XTerm*CharClass: 160-255:48
+XTerm*eightBitInput: false
+!XTerm*translations:    #override \
+!    <Btn4Down>:     scroll-back(1,halfpage) \n\
+!    Ctrl <Btn4Down>: scroll-back(5, line) \n\
+!    <Btn5Down>:     scroll-forw(1,halfpage)
+!    Ctrl <Btn5Down>: scroll-forw(5, line) \n\
+
+! Scroll Bar
+XTerm*scrollKey: true
+XTerm*scrollTtyOutput: false
+XTerm*ScrollBar: true
+XTerm*saveLines: 800
+XTerm*rightScrollBar: true
+XTerm*thickness: 6
+
+XTerm*deleteIsDEL: true
+
+XTerm*loginShell: true
+
+! Enable Colour by default.
+XTerm*background: black
+XTerm*foreground: green
+XTerm*colorMode: on
+XTerm*boldColors: on
+XTerm*dynamicColors: on
+
+XTerm*colorULMode: on
+XTerm*underLine: off
+
+XTerm*colorBDMode: off
+
+*fontMenu*font1*Label:  HUGE
+*VT100*font1:           12x24
+
+XTerm*highlightColor: green4
+XTerm*cursorColor: red
+XTerm*colorUL: yellow
+XTerm*colorBD: green
+!! Color for screen's hardstatus
+XTerm*color8: gray20
+
+!! Rxvt specific
+Rxvt*scrollBar_right: true
+
+GV.gsX11Device:         -dNOPLATFONTS -sDEVICE=x11
