@@ -1,3 +1,13 @@
 [user]
 	name = Zajcev Evgeny
 	email = zevlg@yandex.ru
+
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  df = diff HEAD^1
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  last = for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
