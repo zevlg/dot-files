@@ -2,6 +2,9 @@
 	name = Zajcev Evgeny
 	email = zevlg@yandex.ru
 
+[push]
+  default = current
+
 [alias]
   co = checkout
   st = status
