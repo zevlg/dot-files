@@ -110,11 +110,10 @@ A very useful hack for xrn, xmh: adds scrolling to the specific "Table Of Conten
 XTerm*font:	-*-terminus-medium-r-*-*-32-*-*-*-*-*-iso10646-*
 XTerm*CharClass: 160-255:48
 XTerm*eightBitInput: false
-!XTerm*translations:    #override \
-!    <Btn4Down>:     scroll-back(1,halfpage) \n\
-!    Ctrl <Btn4Down>: scroll-back(5, line) \n\
-!    <Btn5Down>:     scroll-forw(1,halfpage)
-!    Ctrl <Btn5Down>: scroll-forw(5, line) \n\
+XTerm*translations:    #override \
+    Shift <Key>Prior: string(0x1b) string("[5;2~") \n\
+    Shift <Key>Next: string(0x1b) string("[6;2~") \n\
+
 
 ! Scroll Bar
 XTerm*scrollKey: true
@@ -147,7 +146,7 @@ XTerm*highlightColor: green4
 XTerm*cursorColor: red
 XTerm*colorUL: yellow
 XTerm*colorBD: green
-!! Color for screen's hardstatus
+!! Color for screens hardstatus
 XTerm*color8: gray20
 
 !! Rxvt specific
