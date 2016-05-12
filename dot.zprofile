@@ -1,15 +1,24 @@
 ulimit -c unlimited
 umask 022
 
-PATH="/Users/00000000/.cabal/bin:/Users/00000000/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
+PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$PATH
+PATH="/usr/local/cuda/bin:${PATH}"
+PATH="${HOME}/.cask/bin:${PATH}"
+PATH="${HOME}/.local/bin:${PATH}"
+PATH="${HOME}/dev/ocaml/bin:${PATH}"
+PATH="${HOME}/bin:${PATH}"
 export PATH
+
 export ORGANIZATION="Zajcev Evgeny"
 export HISTFILE=~/.history
 export HISTSIZE=11000
-export SAVEHIST=10000 
+export SAVEHIST=100000
 
-export EDITOR=gnuclient
-export VISUAL=gnuclient
+export PATH=/usr/lib/ccache:${PATH}
+export CCACHE_COMPRESS=1
+
+export EDITOR=emacsclient
+export VISUAL=emacsclient
 export PAGER="less -r"
 export LESS=iM
 
@@ -24,9 +33,14 @@ alias root="sudo"
 alias ssh="ssh -Y"
 alias l="ls -alt"
 alias dudir="du -h -d 0"
+
+# freebsd stuff
 alias mount_flash="root mount_msdosfs /dev/da0s1 /mnt/flash"
 # JS-Kit
-alias stag="ssh lg@stag"
+# alias stag="ssh lg@stag"
+
+alias gitst="git status -uno"
+alias gitmm="git fetch && git merge --no-ff origin/master"
 
 # for GO lang
 export GOROOT=$HOME/down/go-lang
@@ -34,7 +48,7 @@ export GOARCH=386
 export GOOS=darwin
 
 # Setup GNUstep
-. /usr/local/GNUstep/System/Library/Makefiles/GNUstep.sh
+# . /usr/local/GNUstep/System/Library/Makefiles/GNUstep.sh
 
 sproxy () {
 	export http_proxy=http://127.0.0.1:3128
@@ -223,7 +237,7 @@ alias -s ps=gv
 alias -s pdf=xpdf
 alias -s txt=less
 alias -s djvu=djview
-alias -s el=gnuclient
+alias -s el=emacsclient
 alias -s chm=chmsee
 
 setopt AUTO_PUSHD
