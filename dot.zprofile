@@ -4,9 +4,9 @@ umask 022
 PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$PATH
 PATH="/usr/local/cuda/bin:${PATH}"
 PATH="${HOME}/.cask/bin:${PATH}"
-PATH="${HOME}/.local/bin:${PATH}"
 PATH="${HOME}/dev/ocaml/bin:${PATH}"
 PATH="${HOME}/bin:${PATH}"
+PATH="${PATH}:${HOME}/.local/bin"
 export PATH
 
 export ORGANIZATION="Zajcev Evgeny"
@@ -247,6 +247,7 @@ setopt AUTO_CD
 setopt CORRECT
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
+setopt INC_APPEND_HISTORY
 
 export PS1="%(?..[%{[1;31m%}%B%?%b%{[1;0m%}])%(1j.[J%j].)[T%D{%H:%M}][%U%16<...<%~%<<%u]$ "
 if [ x$TERM = xxterm-color ]; then
