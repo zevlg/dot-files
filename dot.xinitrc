@@ -1,10 +1,8 @@
 #!/bin/sh
 #
 # xinitrc file for XFce 3 startxfce script
-export XCURSOR_THEME=redglass
-export XCURSOR_SIZE=64
-
-
+export XCURSOR_THEME=Adwaita
+export XCURSOR_SIZE=128
 
 # Some distro needs to allow even localhost to use the display
 # Uncomment this if you experience "Can't open display" when running 
@@ -12,7 +10,7 @@ export XCURSOR_SIZE=64
 #
 # xhost +$HOSTNAME
 #
-export LANG=ru_RU.UTF-8
+#export LANG=ru_RU.UTF-8
 
 xsetroot -solid black -cursor_name watch
 
@@ -52,15 +50,19 @@ if [ -x $XBINDIR/xscreensaver ]; then
 	xscreensaver -no-splash &
 fi
 
+#setxkbmap -model pc105 -layout us,ru -variant dvorak, -option grp:caps_toggle
+
 xrdb -merge ~/.Xdefaults
 xmodmap ~/.Xmodmap
 
 # hide cursor
 unclutter -idle 1 &
 
+xset s off -dpms
 xset m 5 3
+xset r rate 250 45
 
 #exec xterm
-exec /home/lg/bin/xwem-agent -f /home/lg/.xwem/sxemacs.log sxemacs
+exec xwem-agent -f $HOME/.emacs.d/emacs.log emacs
 exec xfwm
 xsetroot -solid black

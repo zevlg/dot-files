@@ -20,3 +20,4 @@ Install packages
 
 sudo apt-get install zsh
 sudo apt-get install unclutter
+sudo apt-get install xfonts-terminus
