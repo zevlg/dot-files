@@ -13,7 +13,7 @@ startup_message off
 
 altscreen on
 
-shell "-/usr/local/bin/zsh"
+shell "-zsh"
 
 #defflow on # will force screen to process ^S/^Q
 
@@ -120,6 +120,10 @@ bindkey -d -k kb stuff \010
 # Don't forget to install xterm translations:
 #   Shift <Key>Prior: string(0x1b) string("[5;2~")
 #   Shift <Key>Next: string(0x1b) string("[6;2~")
+bindkey "[5~" eval "copy" "stuff ^u"
+bindkey -m "[5~" stuff ^u
+bindkey -m "[6~" stuff ^d
+
 bindkey "[5;2~" eval "copy" "stuff ^u"
 bindkey -m "[5;2~" stuff ^u
 bindkey -m "[6;2~" stuff ^d

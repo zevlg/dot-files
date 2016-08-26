@@ -249,7 +249,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 
-export PS1="%(?..[%{[1;31m%}%B%?%b%{[1;0m%}])%(1j.[J%j].)[T%D{%H:%M}][%U%16<...<%~%<<%u]$ "
+export PS1="%(?..[%{[1;31m%}%B%?%b%{[1;0m%}])%(1j.[J%j].)[%n@%m:%U%16<...<%~%<<%u]$ "
 if [ x$TERM = xxterm-color ]; then
 	precmd () { print -Pn "\e]0;%n@%m:%l [%~]\a" }
 	preexec () { print -Pn "\e]0;%n@%m:%l [$1]\a" }
