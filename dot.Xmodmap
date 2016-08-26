@@ -1,5 +1,5 @@
-keycode 109 = Super_R
-keycode 113 = Hyper_R
+keycode 105 = Super_R
+keycode 108 = Hyper_R
 
 clear control
 clear mod1
