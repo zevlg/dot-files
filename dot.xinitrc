@@ -63,6 +63,8 @@ xset m 5 3
 xset r rate 250 45
 
 #exec xterm
+firefox &
+xterm &
 exec xwem-agent -f $HOME/.emacs.d/emacs.log emacs
 exec xfwm
 xsetroot -solid black
