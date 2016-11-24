@@ -63,6 +63,6 @@ xset m 5 3
 xset r rate 250 45
 
 #exec xterm
-exec xwem-agent -f $HOME/.emacs.d/emacs.log emacs
+exec x-agent -f $HOME/.emacs.d/emacs.log -- emacs -L ~/.emacs.d/modules
 exec xfwm
 xsetroot -solid black
