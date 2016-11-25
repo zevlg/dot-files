@@ -5,21 +5,6 @@ xpdf.initialZoom: width
 
 !Xft.dpi: 96
 
-Emacs.default.attributeBackground:	gray80
-Emacs.default.attributeForeground:	black
-!Emacs.default.attributeFont: -cronyx-courier-medium-r-*-*-14-*-*-*-*-*-koi8-r
-Emacs.default.attributeFont: -*-terminus-medium-r-*-*-32-*-*-*-*-*-koi8-r
-Emacs.bold.attributeFont: -*-terminus-bold-r-*-*-32-*-*-*-*-*-koi8-r
-Emacs.bold-italic.attributeFont: -*-terminus-bold-o-*-*-32-*-*-*-*-*-koi8-r
-Emacs.italic.attributeFont: -*-terminus-medium-o-*-*-32-*-*-*-*-*-koi8-r
-Emacs*menubar*font: fixed
-Emacs.modeline.attributeFont: fixed
-Emacs.modeline.attributeBackground: tan
-!Emacs.bold-italic.attributeFont: -cronyx-*-bold-i-*-*-14-*-*-*-*-*-*-*
-!Emacs.italic.attributeFont: -cronyx-*-medium-o-*-*-14-*-*-*-*-*-koi8-*
-!Emacs.bold.attributeFont: -misc-bold-medium-r-semicondensed--13-120-75-75-c-60-koi8-r
-Emacs*popup*Font: -misc-*-*-*-*-*-14-*-*-*-*-*-koi8-r
-
 !! NETSCAPE
 Netscape*fontList: -*-helvetica-medium-r-*-*-8-*-*-*-*-*-*-*
 
@@ -106,7 +91,12 @@ A very useful hack for xrn, xmh: adds scrolling to the specific "Table Of Conten
 !! XTerm
 !! select rus words by double click
 !! XTerm*CharClass: 33:48,37:48,45-47:48,58:48,64:48,126:48,160-255:48
-!XTerm*font:	-*-terminus-medium-r-*-*-32-*-*-*-*-*-koi8-r
+
+!! Use Xft
+!XTerm*renderFont: true
+!XTerm*faceName: RictyDiminishedL
+!XTerm*faceSize: 30
+
 XTerm*font:	-*-terminus-medium-r-*-*-32-*-*-*-*-*-iso10646-*
 XTerm*CharClass: 160-255:48
 XTerm*eightBitInput: false

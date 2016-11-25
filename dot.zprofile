@@ -1,7 +1,7 @@
 ulimit -c unlimited
 umask 022
 
-PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:$PATH
+PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:${PATH}
 PATH="/usr/local/cuda/bin:${PATH}"
 PATH="${HOME}/.cask/bin:${PATH}"
 PATH="${HOME}/dev/ocaml/bin:${PATH}"
@@ -9,7 +9,6 @@ PATH="${HOME}/bin:${PATH}"
 PATH="${PATH}:${HOME}/.local/nim/bin"
 PATH="${PATH}:${HOME}/.nimble/bin"
 PATH="${PATH}:${HOME}/.local/bin"
-export PATH
 
 # home/work specific settings
 CUSTOMRC=${HOME}/.zsh/customrc
@@ -17,13 +16,16 @@ if [ -f ${CUSTOMRC} ]; then
    source ${CUSTOMRC}
 fi
 
+PATH=${PATH}:/usr/lib/ccache
+export PATH
+
+export PATH=${PATH}:/usr/lib/ccache
+export CCACHE_COMPRESS=1
+
 export ORGANIZATION="Zajcev Evgeny"
 export HISTFILE=~/.history
 export HISTSIZE=11000
 export SAVEHIST=100000
-
-export PATH=/usr/lib/ccache:${PATH}
-export CCACHE_COMPRESS=1
 
 export EDITOR=emacsclient
 export VISUAL=emacsclient

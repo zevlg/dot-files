@@ -52,8 +52,11 @@ fi
 
 #setxkbmap -model pc105 -layout us,ru -variant dvorak, -option grp:caps_toggle
 
-xrdb -merge ~/.Xdefaults
-xmodmap ~/.Xmodmap
+xrdb -merge $HOME/.Xdefaults
+
+# Weird stuff!
+xmodmap $HOME/.Xmodmap
+xmodmap $HOME/.Xmodmap
 
 # hide cursor
 unclutter -idle 1 &
@@ -66,5 +69,5 @@ xset r rate 250 45
 firefox &
 xterm &
 exec xwem-agent -f $HOME/.emacs.d/emacs.log emacs
-exec xfwm
+exec metacity
 xsetroot -solid black
