@@ -61,6 +61,9 @@ xmodmap $HOME/.Xmodmap
 # hide cursor
 unclutter -idle 1 &
 
+# notify for the rest
+# xwrits
+
 xset s off -dpms
 xset m 5 3
 xset r rate 250 45

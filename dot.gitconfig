@@ -16,3 +16,6 @@
   dump = cat-file -p
   alllast = for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
   last = for-each-ref --count=10 --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
+
+[include]
+        path = ~/.githubconfig
