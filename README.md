@@ -6,7 +6,6 @@ Create symlinks
     git clone git@github.com:zevlg/dot-files.git
     ln -s ~/github/dot-files/dot.screenrc ~/.screenrc
     ln -s ~/github/dot-files/dot.gitconfig ~/.gitconfig
-    ln -s ~/github/dot-files/dot.githubconfig ~/.githubconfig
     ln -s ~/github/dot-files/dot.Xdefaults ~/.Xdefaults
     ln -s ~/github/dot-files/dot.Xmodmap ~/.Xmodmap
     ln -s ~/github/dot-files/dot.xinitrc ~/.xinitrc
