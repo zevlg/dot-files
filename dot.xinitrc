@@ -66,7 +66,7 @@ unclutter -idle 1 &
 
 xset s off -dpms
 xset m 5 3
-xset r rate 250 45
+xset r rate 250 50
 
 #exec xterm
 firefox &

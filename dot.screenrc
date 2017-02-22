@@ -148,6 +148,7 @@ bind t title
 # screen -t 40 2 rlogin faui40
 
 caption always '%{= Kw}%-Lw%{r}(%{+b .W}%50>%n%f*%t%{r})%{-b .w}%+Lw%<'
+# %{= Bw}% - For Blue
 # caption always "%3n %t%? @%u%?%? [%h]%?"
 # hardstatus alwaysignore
 # hardstatus alwayslastline "%w"
