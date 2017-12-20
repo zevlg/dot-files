@@ -39,13 +39,12 @@ export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 
 export PACKAGESITE=ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-6.2-release/Latest/
 
-# Note: GREP_OPTIONS has been deprecated
-alias grep="grep --color=auto -d skip"
-
 alias root="sudo"
 alias ssh="ssh -Y"
 if [ `uname -o` = "GNU/Linux" ]; then
    alias ls="ls --color=auto"
+   # Note: GREP_OPTIONS has been deprecated
+   alias grep="grep --color=auto -d skip"
 fi
 alias l="ls -alt"
 alias dudir="du -h -d 0"
