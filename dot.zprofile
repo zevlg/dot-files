@@ -41,11 +41,15 @@ export PACKAGESITE=ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-6.2-rel
 
 alias root="sudo"
 alias ssh="ssh -Y"
-if [ `uname -o` = "GNU/Linux" ]; then
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
    alias ls="ls --color=auto"
-   # Note: GREP_OPTIONS has been deprecated
    alias grep="grep --color=auto -d skip"
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   alias ls="ls -G"
+   alias grep="grep --color=auto"
 fi
+
 alias l="ls -alt"
 alias dudir="du -h -d 0"
 
