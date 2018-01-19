@@ -183,7 +183,7 @@ export PS1="%(?..[%{[1;31m%}%B%?%b%{[1;0m%}])%(1j.[J%j].)[%n@%m:%U%16<...<%~%<
 if [ x$TERM = xxterm-color ]; then
 	precmd () { print -Pn "\e]0;%n@%m:%l [%~]\a" }
 	preexec () { print -Pn "\e]0;%n@%m:%l [$1]\a" }
-elif [ x$TERM = xscreen -o x$TERM = xscreen-bce ]; then
+elif [ x$TERM = xscreen -o x$TERM = xscreen-bce -o x$TERM = xscreen.xterm-256color ]; then
 	precmd () { print -Pn "\e]0;%n@%m:%l [%~]\a"; print -Pn "\ek%~\e\\" }
 	preexec () { print -Pn "\e]0;%n@%m:%l [$1]\a"; print -Pn "\ek$1\e\\" }
 fi
