@@ -128,6 +128,13 @@ bindkey "[5;2~" eval "copy" "stuff ^u"
 bindkey -m "[5;2~" stuff ^u
 bindkey -m "[6;2~" stuff ^d
 
+# for blink sh
+bindkey "[1;5A" eval "copy" "stuff ^u"
+bindkey -m "[1;5A" stuff ^u
+bindkey -m "[1;5B" stuff ^d
+
+markkeys "h=^B:l=^F:$=^E"
+
 # next window
 #bindkey "^	" next
 #bindkey "^I" next
