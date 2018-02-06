@@ -4,6 +4,7 @@ umask 022
 PATH=/usr/local/openresty/bin:/usr/local/openresty/nginx/sbin:${PATH}
 PATH="/usr/local/cuda/bin:${PATH}"
 PATH="${HOME}/.cask/bin:${PATH}"
+PATH="${HOME}/.cargo/bin:${PATH}"
 PATH="${HOME}/dev/ocaml/bin:${PATH}"
 PATH="${HOME}/bin:${PATH}"
 PATH="${PATH}:${HOME}/.local/nim/bin"
