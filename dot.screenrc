@@ -154,7 +154,7 @@ bind t title
 # screen -t mail 1 elm
 # screen -t 40 2 rlogin faui40
 
-caption always '%{= Kw}%-Lw%{r}(%{+b .W}%50>%n%f*%t%{r})%{-b .w}%+Lw%<'
+caption always '%{= Kw}%-Lw%{r}(%{+b .W}%50>%n%f*%t%{-b r})%{.w}%+Lw%<'
 # %{= Bw}% - For Blue
 # caption always "%3n %t%? @%u%?%? [%h]%?"
 # hardstatus alwaysignore
