@@ -28,8 +28,8 @@ export HISTFILE=~/.history
 export HISTSIZE=11000
 export SAVEHIST=100000
 
-export EDITOR=emacsclient
-export VISUAL=emacsclient
+export EDITOR="emacsclient -nw"
+export VISUAL=$EDITOR
 export PAGER="less -r"
 export LESS=iM
 
@@ -168,10 +168,10 @@ alias -s {avi,mpeg,mpg,mov,m2v}=mplayer
 alias -s {odt,doc,sxw,rtf}=openoffice.org-2.3.1
 alias -s {ogg,mp3,wav,wma}=mpg321
 alias -s ps=gv
-alias -s pdf=xpdf
+alias -s pdf=evince
 alias -s txt=less
 alias -s djvu=djview
-alias -s el=emacsclient
+alias -s el=emacsclient -nw
 alias -s chm=chmsee
 
 setopt AUTO_PUSHD
