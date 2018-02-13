@@ -184,6 +184,10 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
 
+# refresh history since last incremental append
+# NOTE: use it to add history lines from other shells
+alias rehist="fc -RI"
+
 export PS1="%(?..[%{[1;31m%}%B%?%b%{[1;0m%}])%(1j.[J%j].)[%n@%m:%U%16<...<%~%<<%u]$ "
 if [ x$TERM = xxterm-color ]; then
 	precmd () { print -Pn "\e]0;%n@%m:%l [%~]\a" }
