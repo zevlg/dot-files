@@ -142,9 +142,6 @@ zstyle ':completion:*' completer _complete _ignored _files
 # add colors
 zstyle ':completion:*:default' list-colors 'no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;31:'
 
-autoload -U insert-files
-zle -N insert-files
-
 # enable cmd line prediction
 autoload -U predict-on
 autoload -U predict-off
