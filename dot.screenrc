@@ -108,14 +108,6 @@ register [ "\033:se noai\015a"
 register ] "\033:se ai\015a"
 bind ^] paste [.]
 
-# Red Hat Hack^H^H^H^HPatch
-# This makes screen treat backspaces '^?' as
-# deletes. THere should be a fix in the code
-# for the way termcap inheritance works,
-# but I dont know where to put it, and this works.
-bindkey -d -k kb stuff \010
-# /Red Hat Patch
-
 # make Shift-PageUp/PageDown do scrolling
 # Don't forget to install xterm translations:
 #   Shift <Key>Prior: string(0x1b) string("[5;2~")
