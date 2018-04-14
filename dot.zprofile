@@ -53,7 +53,7 @@ fi
 
 alias l="ls -alt"
 alias dudir="du -h -d 0"
-alias emc="emacsclient -nw"
+alias emc="TERM=xterm-256color emacsclient -nw"
 
 # freebsd stuff
 alias mount_flash="root mount_msdosfs /dev/da0s1 /mnt/flash"
