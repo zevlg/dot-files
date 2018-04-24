@@ -35,6 +35,6 @@ xset r rate 250 50
 #exec xterm
 #firefox &
 xterm &
-exec x-agent -f $HOME/.emacs.d/remacs.log -- remacs -L $HOME/.emacs.d/modules
+exec x-agent -f $HOME/.emacs.d/emacs.log -- emacs -L $HOME/.emacs.d/modules
 exec metacity
 xsetroot -solid black
