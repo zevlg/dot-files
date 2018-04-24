@@ -10,6 +10,7 @@ Create symlinks
     ln -s ~/github/dot-files/dot.Xmodmap ~/.Xmodmap
     ln -s ~/github/dot-files/dot.xinitrc ~/.xinitrc
     ln -s ~/github/dot-files/dot.zprofile ~/.zprofile
+    ln -s ~/github/dot-files/dot.alacritty.yml ~/.alacritty.yml
     ln -s ~/github/dot-files/dot.zsh ~/.zsh
     ln -s ~/github/dot-files/dot.signature ~/.signature
 
