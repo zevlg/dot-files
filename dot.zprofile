@@ -53,7 +53,7 @@ fi
 
 alias l="ls -alt"
 alias dudir="du -h -d 0"
-alias emc="TERM=xterm-256color emacsclient -nw"
+alias emc=$EDITOR
 
 # freebsd stuff
 alias mount_flash="root mount_msdosfs /dev/da0s1 /mnt/flash"
@@ -61,10 +61,10 @@ alias mount_flash="root mount_msdosfs /dev/da0s1 /mnt/flash"
 alias gitst="git status -uno"
 alias gitmm="git fetch && git merge --no-ff origin/master"
 
-# for GO lang
-export GOROOT=$HOME/down/go-lang
-export GOARCH=386
-export GOOS=darwin
+# for go
+if [[ "$unamestr" == 'Linux' ]]; then
+   export PATH="${PATH}:/usr/lib/go-1.10/bin"
+fi
 
 # Setup GNUstep
 # . /usr/local/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -186,10 +186,10 @@ setopt INC_APPEND_HISTORY
 alias rehist="fc -RI"
 
 export PS1="%(?..[%{[1;31m%}%B%?%b%{[1;0m%}])%(1j.[J%j].)[%n@%m:%U%16<...<%~%<<%u]$ "
-if [ x$TERM = xxterm-color ]; then
+if [ x$TERM = xxterm-color -o x$TERM = xxterm-256color ]; then
 	precmd () { print -Pn "\e]0;%n@%m:%l [%~]\a" }
 	preexec () { print -Pn "\e]0;%n@%m:%l [$1]\a" }
-elif [ x$TERM = xscreen -o x$TERM = xscreen-bce -o x$TERM = xscreen.xterm-256color ]; then
+elif [ x$TERM = xscreen -o x$TERM = xscreen-bce -o x$TERM = xscreen-256color ]; then
 	precmd () { print -Pn "\e]0;%n@%m:%l [%~]\a"; print -Pn "\ek%~\e\\" }
 	preexec () { print -Pn "\e]0;%n@%m:%l [$1]\a"; print -Pn "\ek$1\e\\" }
 fi
