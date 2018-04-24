@@ -3,17 +3,14 @@
 # You may want to install this file as /usr/local/etc/screenrc.
 # Check config.h for the exact location.
 #
-chdir /home/lg
+chdir $HOME
+term screen-256color
+shell "-zsh"
+escape ^Zz
 
 # Flaws of termcap and standard settings are done here.
-#
-
-escape ^Zz
 startup_message off
-
 altscreen on
-
-shell "-zsh"
 
 #defflow on # will force screen to process ^S/^Q
 
@@ -61,8 +58,8 @@ termcapinfo  xterm* Z0=\E[?3h:Z1=\E[?3l:is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l
 # Make the output buffer large for (fast) xterms.
 termcapinfo xterm* OL=10000
 
-# tell screen that xterm can switch to dark background and has function
-# keys.
+# tell screen that xterm can switch to dark background and has
+# function keys.
 termcapinfo xterm* 'VR=\E[?5h:VN=\E[?5l'
 termcapinfo xterm* 'k1=\E[11~:k2=\E[12~:k3=\E[13~:k4=\E[14~'
 termcapinfo xterm* 'kh=\E[1~:kI=\E[2~:kD=\E[3~:kH=\E[4~:kP=\E[H:kN=\E[6~'
@@ -78,11 +75,11 @@ termcapinfo   xterm* 'XC=K%,%\E(B,[\304,\\\\\326,]\334,{\344,|\366,}\374,~\337'
 
 # xterm-52 tweaks:
 # - uses background color for delete operations
-termcapinfo xterm be
+###termcapinfo xterm be
 
 # coloring enhances for xterm
 termcapinfo xterm* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-defbce "on"
+defbce "off"
 
 ################
 #
@@ -132,8 +129,9 @@ markkeys "h=^B:l=^F:$=^E"
 #bindkey "^I" next
 
 # emacs style window switcher
-bindkey "^l" other
-bindkey "l" windowlist -b
+# NOTE: conflicts with emacs running in screen
+# bindkey "^l" other
+# bindkey "l" windowlist -b
 
 bind t title
 
