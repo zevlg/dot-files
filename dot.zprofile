@@ -209,6 +209,13 @@ function vterm_printf(){
     fi
 }
 
+vterm_prompt_end() {
+    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)";
+}
+setopt PROMPT_SUBST
+PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
+
 function vterm_cmd() {
     if [ -n "$TMUX" ]; then
         # tell tmux to pass the escape sequences through

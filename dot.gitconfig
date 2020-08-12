@@ -22,3 +22,5 @@
 
 [include]
         path = ~/.githubconfig
+[github]
+	user = zevlg
