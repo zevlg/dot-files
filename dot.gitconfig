@@ -24,3 +24,5 @@
         path = ~/.githubconfig
 [github]
 	user = zevlg
+[status]
+	showUntrackedFiles = all
