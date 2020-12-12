@@ -4,6 +4,10 @@ keycode 133 = Alt_L
 keycode 64 = Control_L
 keycode 107 = Super_L
 
+! Make Shift-Alt work in Ubuntu
+keysym Alt_L = Alt_L Alt_L
+keysym Alt_R = Alt_R Alt_R
+
 clear control
 clear mod1
 clear mod2
