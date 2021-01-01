@@ -18,6 +18,12 @@ if [ -f ${CUSTOMRC} ]; then
    source ${CUSTOMRC}
 fi
 
+# Nix
+NIX_SH=${HOME}/.nix-profile/etc/profile.d/nix.sh
+if [ -f ${NIX_SH} ]; then
+   source ${NIX_SH}
+fi
+
 PATH=${PATH}:/usr/lib/ccache
 export PATH
 
@@ -41,6 +47,7 @@ export LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 
 export PACKAGESITE=ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-6.2-release/Latest/
 
+alias json_pp="python3 -mjson.tool"
 alias root="sudo"
 alias ssh="ssh -Y"
 unamestr=`uname`
