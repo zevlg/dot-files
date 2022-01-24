@@ -113,6 +113,7 @@ bind ^] paste [.]
 #bindkey -m "[5~" stuff ^u
 #bindkey -m "[6~" stuff ^d
 
+# make Shift-PageUp/PageDown do scrolling
 bindkey "[5;2~" eval "copy" "stuff ^u"
 bindkey -m "[5;2~" stuff ^u
 bindkey -m "[6;2~" stuff ^d

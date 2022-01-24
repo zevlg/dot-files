@@ -11,6 +11,8 @@ PATH="${HOME}/bin:${PATH}"
 PATH="${PATH}:${HOME}/.local/nim/bin"
 PATH="${PATH}:${HOME}/.nimble/bin"
 PATH="${PATH}:${HOME}/.local/bin"
+# go env GOPATH
+PATH="${PATH}:${HOME}/go/bin"
 
 # home/work specific settings
 CUSTOMRC=${HOME}/.zsh/customrc
@@ -68,11 +70,6 @@ alias mount_flash="root mount_msdosfs /dev/da0s1 /mnt/flash"
 
 alias gitst="git status -uno"
 alias gitmm="git fetch && git merge --no-ff origin/master"
-
-# for go
-if [[ "$unamestr" == 'Linux' ]]; then
-   export PATH="${PATH}:/usr/lib/go-1.10/bin"
-fi
 
 # Setup GNUstep
 # . /usr/local/GNUstep/System/Library/Makefiles/GNUstep.sh

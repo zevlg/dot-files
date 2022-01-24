@@ -12,9 +12,10 @@ xset fp+ "/usr/local/share/xfce/fonts"
 
 # For ordinary keyboard
 #setxkbmap -model pc105 -layout us,ru -variant dvorak, -option grp:caps_toggle,grp_led:caps
+setxkbmap -model pc105 -layout us,ru -variant dvorak, -option grp:caps_toggle,ctrl:swap_lalt_lctl,altwin:swap_lalt_lwin
 
 # For kinesis ProQD
-setxkbmap -model pc105 -layout us,ru\(phonetic\) -option grp:caps_toggle,grp_led:caps
+#setxkbmap -model pc105 -layout us,ru\(phonetic\) -option grp:caps_toggle,grp_led:caps
 
 xrdb -merge $HOME/.Xdefaults
 
